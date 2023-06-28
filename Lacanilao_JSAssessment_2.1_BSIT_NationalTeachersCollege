@@ -1,0 +1,32 @@
+const NFTs = [
+    {
+        name: "Movies"
+    }
+];
+
+function mintNFT(nft) {
+    NFTs.push(nft);
+    return nft;
+}
+
+function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log(NFTs[i]);
+    }
+    console.log("---------------------");
+}
+
+function getTotalSupply() {
+    console.log("Total Supply: " + NFTs.length);
+    console.log("----------------------");
+}
+
+listNFTs();
+
+mintNFT({title: "The First Slamdunk"});
+mintNFT({year: "2023"});
+mintNFT({protagonist: "Shohoku Basketball Team"})
+mintNFT({antagonist: "Sannoh High School Basketball Team"})
+listNFTs();
+
+getTotalSupply();
